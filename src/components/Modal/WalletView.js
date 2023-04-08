@@ -1,7 +1,6 @@
 import React, { useState, useEffect } from "react";
 import { CopyToClipboard } from "react-copy-to-clipboard";
 import Logo from "../../assets/img/aptos.png";
-import notificationConfig from "../../services/notificationConfig";
 import { useWallet } from "@aptos-labs/wallet-adapter-react";
 
 const WalletView = () => {
@@ -13,7 +12,6 @@ const WalletView = () => {
 
   useEffect(() => {
     if (copied) {
-      notificationConfig.success("Wallet Address Copied!");
       setCopied(false);
     }
   }, [copied]);
